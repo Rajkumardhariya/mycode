@@ -1,0 +1,119 @@
+<h1>Hello Plugin</h1>
+<canvas baseChart 
+>
+</canvas>
+<script>
+    export default function App() {
+  useEffect(() => {
+    Chart.register(ChartDataLabels);
+    var ctx = document.getElementById("myChart").getContext("2d");
+    const myFunnel = new Chart(ctx, config);
+    myFunnel.update();
+  }, []);
+
+  return (
+    <div className="App">
+      <canvas id="myChart"></canvas>
+    </div>
+  );
+}
+  
+</script>
+
+<!--import "./styles.css";
+import { Chart } from "chart.js";
+// import ChartDataLabels from "chartjs-plugin-datalabels";
+import * as Funnel from "chartjs-plugin-funnel";
+import { useEffect } from "react";
+
+// Chart.js funnel
+
+var config = {
+  type: "funnel",
+  data: {
+    labels: ["Red ", "Blue", "Yellow", "Grey", "Green"],
+    datasets: [
+      {
+        data: [20, 40, 60, 80, 100],
+        backgroundColor: [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56",
+          "#A0A0A0",
+          "	#00ff00"
+        ],
+        hoverBackgroundColor: [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56",
+          "#A0A0A0",
+          "	#00ff00"
+        ]
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    sort: "asc",
+    text: "Dat",
+    legend: {
+      position: "left",
+      display: true
+    },
+    title: {
+      display: true,
+      text: "Data"
+    },
+
+    animation: {
+      animateScale: true,
+      animateRotate: true,
+      duration: 500,
+      easing: "easeOutQuart",
+      onComplete: function () {
+        var ctx = this.chart.ctx;
+        ctx.font = Chart.helpers.fontString(
+          Chart.defaults.global.defaultFontFamily,
+          "normal",
+          Chart.defaults.global.defaultFontFamily
+        );
+        ctx.textAlign = "center";
+        ctx.textBaseline = "bottom";
+
+        this.data.datasets.forEach(function (dataset) {
+          for (var i = 0; i < dataset.data.length; i++) {
+            var model =
+                dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
+              // when the bar's value is too close to max value of scale
+              y_pos = model.y + 20;
+            ctx.fillText(dataset.data[i], model.x, y_pos);
+          }
+        });
+      }
+    },
+    plugins: {
+      datalabels: {
+        display: true,
+
+        align: "left",
+        anchor: "left"
+      }
+    }
+  }
+};
+
+export default function App() {
+  useEffect(() => {
+    // Chart.register(ChartDataLabels);
+    var ctx = document.getElementById("myChart").getContext("2d");
+    const myFunnel = new Chart(ctx, config);
+    myFunnel.update();
+  }, []);
+
+  return (
+    <div className="App">
+      <canvas id="myChart"></canvas>
+    </div>
+  );
+}
+-->
