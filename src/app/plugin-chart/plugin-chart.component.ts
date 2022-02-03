@@ -58,20 +58,5 @@ config = {
     }
   }
 };
-/*
-App() {
-  useEffect(() => {
-    // Chart.register(ChartDataLabels);
-    var ctx = document.getElementById("myChart").getContext("2d");
-    const myFunnel = new Chart(ctx, config);
-    myFunnel.update();
-  }, []);
 
-  return (
-    <div className="App">
-      <canvas id="myChart"></canvas>
-    </div>
-  );
-}
-  */
 }
