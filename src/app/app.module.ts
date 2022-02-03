@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ChartsModule,ThemeService,BaseChartDirective  } from 'ng2-charts';
 import { PluginChartComponent  } from './plugin-chart/plugin-chart.component';
-import * as ChartLabels from 'chartjs-plugin-funnel';
+
     
 
 
@@ -48,7 +48,7 @@ import * as ChartLabels from 'chartjs-plugin-funnel';
 export class AppModule { 
 
   constructor() {
-    BaseChartDirective.registerPlugin(ChartLabels); // this makes chart plugins work in components
+    
   }
 }
 

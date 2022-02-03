@@ -5,7 +5,7 @@ import { Label,BaseChartDirective } from 'ng2-charts';
 //mport 'chartjs-chart-treemap';
 //import * as ChartLabels from 'chartjs-chart-treemap';
 
-import * as ChartLabels from 'chartjs-plugin-funnel';
+//import * as ChartLabels from 'chartjs-plugin-funnel';
 //const ChartLabels = require('chartjs-plugin-funnel');
 
 @Component({
@@ -18,7 +18,7 @@ export class PluginChartComponent {
 
  
   constructor() {
-    BaseChartDirective.registerPlugin(ChartLabels); // this makes chart plugins work in components
+   // BaseChartDirective.registerPlugin(ChartLabels); // this makes chart plugins work in components
   }
  
 config = {
